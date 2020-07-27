@@ -1,6 +1,31 @@
-#Schedules
+# Schedules 
 
-##
+This is repository for Junior Software Heoes 2020 - Sponsored by Samseong   
+with KU and JA
+# Smart Eco Systems
+
+## 1st Week
+
+### Constructing Environments   
+
+  We will set up the computers especially OS and terminal.
+We are going to use WSL and CMD because almost of the students definetaly will use Window machine.  
+So we will teach how to set up the computer environment and install the python3. 
+
+### Basic Python
+
+  We supposed that all students are the novice for the python grammer. So we will teach basic python method and some applications for that.
+
+## 2nd Week
+
+### rasepberry pi4
+  We will teach how to setup rasepberry pi4 from A to Z. Aldo We will let them know the concept of host(server) and client. If they pass this week successgly, they can connect to rasepberry pi4 remotely via ssh command.
+
+### IDE
+ There are numorouse IDE curretly. We choose Vscode because it's free and easy to use for novice coder. We will also teach how to connect rasepberry pi4 with vscode.
+  
+## 3rd Week
+
 3주: 센서 출력 - 팬, 펌프, 서보모터
 - 동영상 기본
 
