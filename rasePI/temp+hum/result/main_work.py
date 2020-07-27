@@ -1,16 +1,20 @@
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import modules
+import modulesH
+import modulesT
+import RPi.GPIO as GPIO
+import time
+import spidev
 
 
-W1,b1= modules.LinearRegression( 10 , 0.001 )
+W,b= modulesH.LinearRegression( 10 , 0.001 )
 
-print(W1,b1)
+print(W,b)
 
 timeNext = 1.
 
-hum = W1 * timeNext + b1
+hum = W * timeNext + b
 
 print(hum)
 
@@ -41,11 +45,11 @@ GPIO.cleanup()
 spi.close()
 
 
-W2,b2 = modules.LinearRegression( 10 , 0.001 )
+W,b = modulesT.LinearRegression( 10 , 0.001 )
 
-print(W2,b2)
+print(W,b)
 
-temp = W2 * timeNext + b2 
+temp = W * timeNext + b 
 
 print(temp)
 
