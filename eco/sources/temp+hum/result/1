@@ -1,0 +1,76 @@
+import Adafruit_DHT as dht
+import time
+import csv
+import datetime
+import matplotlib.pyplot as plt
+import tensorflow as tf
+import numpy as np
+
+
+def LinearRegression(step, lr):
+    timelist = []
+    humilist = []
+    templist = []
+
+    timeOut = []
+    humiOut = []
+    tempOut = []
+    i = 0
+    while i < step:
+        h,t = dht.read_retry(dht.DHT22, 4)
+        now = datetime.datetime.now()
+        nowTime = now.strftime('%H:%M:%S')
+        print(nowTime)
+        print('Temp={0:0.01f}*C Humidity={1:0.01f}%'.format(t, h))
+    
+        timelist.append(i)
+        humilist.append(h)
+        templist.append(t)
+        time.sleep(.01)
+        i = i + 1;
+    
+    print(humilist)  
+    
+    x_data = timelist
+    y_data = humilist
+    
+    b_initial = humilist[0]
+    W_initial = (humilist[8] - humilist[1]) / 8.
+    #W_initial = humilist[0]
+    print(W_initial)
+    W = tf.Variable(W_initial)
+    b = tf.Variable(b_initial)
+    W_result = 0.
+    b_result = 0.
+    
+    learning_rate = lr
+    
+    for i in range(200):
+        with tf.GradientTape() as tape:
+            hypothesis = W * x_data + b
+            cost = tf.reduce_mean(tf.square(hypothesis - y_data))
+    
+        W_grad, b_grad = tape.gradient(cost, [W, b])
+        W.assign_sub(learning_rate * W_grad)
+        b.assign_sub(learning_rate * b_grad)
+    
+        if i % 50 == 0:
+            print("{:5}|{:10.4}|{:10.4}|{:10.6f}".format(i, W.numpy(), b.numpy(), cost))
+    
+            plt.scatter(x_data, y_data, label = 'data')
+    
+            x = np.arange(0, 10, 1)
+            y = [(W * num * num + b) for num in x]
+    
+    
+            plt.plot(x, y, c='r', label = 'W = '+ str(W.numpy()) + ',  b = ' + str(b.numpy()))
+            
+            W_result = W.numpy()
+            b_result = b.numpy()
+            
+            plt.title('i = ' + str(i))
+            plt.legend()
+            plt.show()
+    
+    return W_result, b_result 
+
