@@ -1,6 +1,6 @@
 # Schedules 
 
-This is repository for Junior Software Heoes 2020 - Sponsored by Samseong   
+This is repository for Junior Software Heroes 2020 - Sponsored by Samseong   
 with KU and JA
 # Smart Eco Systems
 
@@ -23,24 +23,38 @@ So we will teach how to set up the computer environment and install the python3.
 
 ### IDE
  There are numorouse IDE curretly. We choose Vscode because it's free and easy to use for novice coder. We will also teach how to connect rasepberry pi4 with vscode.
-  
+
+### IO
+The students will genrate the random data and save that in CSV format. They will learn IO process with csv and pandas dataframe. 
+
 ## 3rd Week
+  Students can learn how to control the mini fan, water pump, led, and servo motor with GPIO network connection in this week. they will not gonna take data. Mentors can check their progress by uploaded code and movie from students.
 
-3주: 센서 출력 - 팬, 펌프, 서보모터
-- 동영상 기본
+## 4th Week
+  Now students can take the datas. they can draw 2D, 3D graph with thier own datas. They will see the instant  data with light(lux) , temperature, humidity, and gyro(tilt) sensors. Also they can visualize the data with matplotlib package. They have to upload their own code , not screenshot result. 
 
+### light sensor
+  Students will draw graph - time vs quantity of the light(lux). Mentors will check the 
 
-4주: 센서 입력 - 조도, 온습도, 기울기
-- 출력 화면
-- 센서 3개 하나 골라서 csv 파일 만들어서 그래프 그려보기 	// 코드만 올려라, 스샷 불필요
-1) 조도 - 그래프
-2) 온습도 - 온도, 습도, 온습도 그래프
-3) 기울기 - 2D든 3D든 원하는 열 추출 (x, y, z 열 상관 x / 시간 축 빼도 o)
- 
+### temperature and humidity sensor
+  Students will learn how to get the temperature and humidity sensors
 
-5주: 센서 입력받아서 출력 - 조도와 led, 온도 높으면 팬, 건조하면 펌프 
-- led 커지는 범위 바꿔봐라 / 온도 / 습도 기준 바꿔봐라~		// 코드 올려라
-- 입력 출력 골라서 너네가 해봐라~~~
+### gyro sensor
+  Students can print the x,y,z acceleration with gyro(tilt) sensor.
+
+### Drawing the graphs 
+
+#### light sensor graph
+  Students will give assignment that drawing the graph of the quantity of light vs time.
+
+#### temperature and humidity graph
+  Students will draw the graph.
+
+#### gyro sensor graph
+  Students will draw the graph. - It doesn't matter 3D or 2D graph. But they should extract the 1 row data with their own data. 
+#### Final Assignment
+  Final goal of 4th week is uploading the code for drawing 2D or 3D graph for what they choose.
+
 
 
 6주: 머신러닝 /  온습도-팬 및 펌프 47~58
