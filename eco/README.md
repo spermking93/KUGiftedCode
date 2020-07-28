@@ -42,22 +42,28 @@ The students will genrate the random data and save that in CSV format. They will
 ### gyro sensor
   Students can print the x,y,z acceleration with gyro(tilt) sensor.
 
-### Drawing the graphs 
+### light sensor graph
+  Students will be given assignment that drawing the graph of the quantity of light vs time.
 
-#### light sensor graph
-  Students will give assignment that drawing the graph of the quantity of light vs time.
-
-#### temperature and humidity graph
+### temperature and humidity graph
   Students will draw the graph.
 
-#### gyro sensor graph
+### gyro sensor graph
   Students will draw the graph. - It doesn't matter 3D or 2D graph. But they should extract the 1 row data with their own data. 
-#### Final Assignment
+### Final Assignment
   Final goal of 4th week is uploading the code for drawing 2D or 3D graph for what they choose.
 
+## 5th Week
+ Students will learn about 'if' command. Specifically, they will make thier own code to turn on water pump 'if' the humidity is lower than certain threshold.
+They should take the sensors and module for making their own module - 'if'.
 
+## 6th Week
+  Stdudents will learn about the basic concept of machine learning - linear regression.
+  They will take 10 points under certain time interval and predict the next data.
+  The water pump and mini fan will turn on depending on the prediction data. 
+  eg. if prediction is higher than 30 degree - It will be set up manually by user - mini fan will turn on.
+  
 
-6주: 머신러닝 /  온습도-팬 및 펌프 47~58
+# 7th Week - 8th Week
 
-
-7주-8주: 화분 구축 - 온습도(팬펌프) + 조도(led 이건 5주차 복붙)
+Finally they will make smart eco system with ML algorithm and sensors. The basic code will be given, but Final goal will be making their eco system. 
