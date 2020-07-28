@@ -5,7 +5,7 @@ with KU and JA
 # Smart Eco Systems
 
 ## 1st Week 
-[1st Week](https://drive.google.com/file/d/157xqoC__VIoRSES-5Ir9s224B_qW8xck/view?usp=sharing)
+[1st Week Presentation](https://drive.google.com/file/d/157xqoC__VIoRSES-5Ir9s224B_qW8xck/view?usp=sharing)
 ### Constructing Environments   
 
   We will set up the computers especially OS and terminal.
@@ -17,6 +17,7 @@ So we will teach how to set up the computer environment and install the python3.
   We supposed that all students are the novice for the python grammer. So we will teach basic python method and some applications for that.
 
 ## 2nd Week
+[2nd Week Presentation](https://drive.google.com/file/d/17ZzpeTlDhiM_OLZ5rz30POZC7X_WQ5GP/view?usp=sharing)
 
 ### rasepberry pi4
   We will teach how to setup rasepberry pi4 from A to Z. Aldo We will let them know the concept of host(server) and client. If they pass this week successgly, they can connect to rasepberry pi4 remotely via ssh command.
@@ -28,9 +29,11 @@ So we will teach how to set up the computer environment and install the python3.
 The students will genrate the random data and save that in CSV format. They will learn IO process with csv and pandas dataframe. 
 
 ## 3rd Week
+[3rd Week Presentation](https://drive.google.com/file/d/11dpLd_fmhs9naDDPd8p6ON2IsECuvppN/view?usp=sharing)
   Students can learn how to control the mini fan, water pump, led, and servo motor with GPIO network connection in this week. they will not gonna take data. Mentors can check their progress by uploaded code and movie from students.
 
 ## 4th Week
+[4th Week Presentation](https://drive.google.com/file/d/1eudBn5VrGlNcZxoNNNQ3EqWLLkG4GGNB/view?usp=sharing)
   Now students can take the datas. they can draw 2D, 3D graph with thier own datas. They will see the instant  data with light(lux) , temperature, humidity, and gyro(tilt) sensors. Also they can visualize the data with matplotlib package. They have to upload their own code , not screenshot result. 
 
 ### light sensor
