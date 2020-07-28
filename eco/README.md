@@ -30,11 +30,13 @@ The students will genrate the random data and save that in CSV format. They will
 
 ## 3rd Week
 [3rd Week Presentation](https://drive.google.com/file/d/11dpLd_fmhs9naDDPd8p6ON2IsECuvppN/view?usp=sharing)
+
   Students can learn how to control the mini fan, water pump, led, and servo motor with GPIO network connection in this week. they will not gonna take data. Mentors can check their progress by uploaded code and movie from students.
 
 ## 4th Week
 [4th Week Presentation](https://drive.google.com/file/d/1eudBn5VrGlNcZxoNNNQ3EqWLLkG4GGNB/view?usp=sharing)
-  Now students can take the datas. they can draw 2D, 3D graph with thier own datas. They will see the instant  data with light(lux) , temperature, humidity, and gyro(tilt) sensors. Also they can visualize the data with matplotlib package. They have to upload their own code , not screenshot result. 
+ 
+Now students can take the datas. they can draw 2D, 3D graph with thier own datas. They will see the instant  data with light(lux) , temperature, humidity, and gyro(tilt) sensors. Also they can visualize the data with matplotlib package. They have to upload their own code , not screenshot result. 
 
 ### light sensor
   Students will draw graph - time vs quantity of the light(lux). Mentors will check the 
