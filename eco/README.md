@@ -4,8 +4,8 @@ This is repository for Junior Software Heroes 2020 - Sponsored by Samseong
 with KU and JA
 # Smart Eco Systems
 
-## 1st Week
-
+## 1st Week 
+[1st Week](https://drive.google.com/file/d/157xqoC__VIoRSES-5Ir9s224B_qW8xck/view?usp=sharing)
 ### Constructing Environments   
 
   We will set up the computers especially OS and terminal.
