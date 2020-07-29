@@ -28,7 +28,7 @@ try:
         time.sleep(1)
         p.ChangeDutyCycle(8)
         print("angle : 8")
-        time.sleep(1)
+        time.sleep(1)	
 
 # 키 인터럽트가 발생하면 종료합니다.
 except KeyboardInterrupt:
