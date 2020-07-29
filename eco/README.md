@@ -29,9 +29,14 @@ So we will teach how to set up the computer environment and install the python3.
 The students will genrate the random data and save that in CSV format. They will learn IO process with csv and pandas dataframe. 
 
 ## 3rd Week
-[3rd Week Presentation](https://drive.google.com/file/d/11dpLd_fmhs9naDDPd8p6ON2IsECuvppN/view?usp=sharing)
+[3rd Week Presentation](https://drive.google.com/file/d/1H-YSwfveIbxGquh5NBNvSsgJWNdnpYc3/view?usp=sharing)
 
   Students can learn how to control the mini fan, water pump, led, and servo motor with GPIO network connection in this week. they will not gonna take data. Mentors can check their progress by uploaded code and movie from students.
+
+### Learning sensors module by module
+
+  Students will learn howto control the sensors one by one. 
+  They will have an asignment to complete the wiring.  
 
 ## 4th Week
 [4th Week Presentation](https://drive.google.com/file/d/1eudBn5VrGlNcZxoNNNQ3EqWLLkG4GGNB/view?usp=sharing)
@@ -54,7 +59,8 @@ Now students can take the datas. they can draw 2D, 3D graph with thier own datas
   Students will draw the graph.
 
 ### gyro sensor graph
-  Students will draw the graph. - It doesn't matter 3D or 2D graph. But they should extract the 1 row data with their own data. 
+  Students will draw the graph. - It doesn't matter 3D or 2D graph. But they should extract the 1 row data with their own data.
+   
 ### Final Assignment
   Final goal of 4th week is uploading the code for drawing 2D or 3D graph for what they choose.
 
