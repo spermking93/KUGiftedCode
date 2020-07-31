@@ -23,6 +23,8 @@ ONETIME_L_RES_MODE  = 0x23
 # 사용할 I2C 채널 라이브러리를 생성합니다.
 i2c = smbus.SMBus(I2C_CH)
 
+time.sleep(1)
+
 # 아래의 코드를 시도합니다.
 try:
     # while문 안에 있는 코드를 계속 시행합니다.

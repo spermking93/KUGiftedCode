@@ -2,13 +2,15 @@
 
 import time
 import Adafruit_ADXL345
+import datetime
 
 # 모듈을 읽어옵니다.
 accel = Adafruit_ADXL345.ADXL345()
 
 print('Printing X, Y, Z axis values, press Ctrl-C to quit...')
 
-
+time.sleep(1)
+        
 # 아래의 코드를 시도합니다.
 try:
     # while문 안에 있는 코드를 계속 시행합니다.
@@ -19,14 +21,12 @@ try:
         nowTime = now.strftime('%H:%M:%S')        
         
         # 읽어온 기울기의 정도를 형식에 맞추어 출력합니다.
-        print('X={0}, Y={1}, Z={2}, t{3}'.format(x, y, z, nowTime))
+        print('time={0} X={1}, Y={2}, Z={3}'.format(nowTime, x, y, z))
 
         # 1초의 텀을 줍니다.
         time.sleep(1.0)
        
 # 키 인터럽트가 발생하면 종료합니다.
-except KeybordInterrupt:
+except KeyboardInterrupt:
     print("done")
 
-# GPIO 핀 설정을 모두 초기화 해줍니다.
-GPIO.cleanup()
