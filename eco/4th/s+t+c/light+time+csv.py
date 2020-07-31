@@ -3,10 +3,14 @@
 import smbus   # i2c 라이브러리
 import time
 import csv
+import datetime
 
 fLightT = open('lightTime.csv', 'w', encoding='utf-8', newline='')
+wr = csv.writer(fLightT)
+
 # 사용할 i2c 채널 번호
 I2C_CH = 1
+
 # BH1750 주소
 BH1750_DEV_ADDR = 0x23
 
@@ -25,6 +29,8 @@ ONETIME_L_RES_MODE  = 0x23
 # 사용할 I2C 채널 라이브러리를 생성합니다.
 i2c = smbus.SMBus(I2C_CH)
 
+time.sleep(1)
+
 # 아래의 코드를 시도합니다.
 try:
     # while문 안에 있는 코드를 계속 시행합니다.
@@ -37,8 +43,8 @@ try:
         nowTime = now.strftime('%H:%M:%S')
         # 출력합니다.
         
-        print('time = {0:0.01f} lux={1:0.01f}%'.format(nowTime,lux))
-        write.writerow([nowTime, lux])
+        print('time={0} lux={1:0.01f}'.format(nowTime,lux))
+        wr.writerow([nowTime, lux])
         # 1초의 텀을 줍니다.
         time.sleep(1)
 
