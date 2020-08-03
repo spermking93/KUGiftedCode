@@ -29,7 +29,8 @@ So we will teach how to set up the computer environment and install the python3.
 The students will genrate the random data and save that in CSV format. They will learn IO process with csv and pandas dataframe. 
 
 ## 3rd Week
-[3rd Week Presentation](https://drive.google.com/file/d/1H-YSwfveIbxGquh5NBNvSsgJWNdnpYc3/view?usp=sharing)
+[3rd Week Presentation](https://drive.google.com/file/d/1PwAlEKVr4v928iUiQ2ApL5n5HBQhrSkN/view?usp=sharing)
+[3rd Week Codes](https://drive.google.com/file/d/1NGrldhiUSy23qNLiLCCRUnOv7TwUgPiX/view?usp=sharing)
 
   Students can learn how to control the mini fan, water pump, led, and servo motor with GPIO network connection in this week. they will not gonna take data. Mentors can check their progress by uploaded code and movie from students.
 
