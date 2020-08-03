@@ -1,4 +1,5 @@
 # 서보모터를 제어해봅니다.
+
 import RPi.GPIO as GPIO
 import time
  
