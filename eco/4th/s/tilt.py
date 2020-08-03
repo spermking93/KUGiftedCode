@@ -8,6 +8,7 @@ accel = Adafruit_ADXL345.ADXL345()
 
 print('Printing X, Y, Z axis values, press Ctrl-C to quit...')
 
+time.sleep(1)
 
 # 아래의 코드를 시도합니다.
 try:
@@ -23,8 +24,6 @@ try:
         time.sleep(1.0)
        
 # 키 인터럽트가 발생하면 종료합니다.
-except KeybordInterrupt:
+except KeyboardInterrupt:
     print("done")
 
-# GPIO 핀 설정을 모두 초기화 해줍니다.
-GPIO.cleanup()

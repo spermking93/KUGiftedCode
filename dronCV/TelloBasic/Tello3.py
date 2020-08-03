@@ -22,7 +22,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 tello_address = ('192.168.10.1', 8889)
 
 sock.bind(locaddr)
-
+#hello world
 def recv():
     count = 0
     while True: 
