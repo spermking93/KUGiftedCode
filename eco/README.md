@@ -42,7 +42,7 @@ The students will genrate the random data and save that in CSV format. They will
   They will have an asignment to complete the wiring.  
 
 ## 4th Week
-[4th Week Presentation](https://drive.google.com/file/d/1imcbzy9uvHCuNNdhnJEt_se4IxisCN_A/view?usp=sharing)
+[4th Week Presentation](https://drive.google.com/file/d/1_M2m26qym7HfEwB8ZsQ-6_pUWazS6t4K/view?usp=sharing)
  
 Now students can take the datas. they can draw 2D, 3D graph with thier own datas. They will see the instant  data with light(lux) , temperature, humidity, and gyro(tilt) sensors. Also they can visualize the data with matplotlib package. They have to upload their own code , not screenshot result. 
 
