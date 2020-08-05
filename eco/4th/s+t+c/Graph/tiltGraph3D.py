@@ -2,18 +2,6 @@ import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
-def plot3D(x, y, z):
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_zlabel('z')
-
-    ax.scatter(x, y, z)
-
-    plt.show()
-
 df = pd.read_csv("tiltTime.csv", header=None)
 print(df[0])
 
@@ -26,12 +14,12 @@ df3 = df[(df[2] > -100) & (df[2] < 100) & (df[3] < -200) ]
 df4 = df[(df[2] < -100) & (df[3] > -200) & (df[3] < 100) ]
 
 
-fig = plt.figure()
+fig = plt.figure(figsize = (10,10))
 ax = fig.add_subplot(111, projection='3d')
 
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
+ax.set_xlabel('x', fontsize = 20)
+ax.set_ylabel('y', fontsize = 20)
+ax.set_zlabel('z', fontsize = 20)
 
 #ax.scatter(df[1], df[2], df[3])
 ax.scatter(df1[1], df1[2], df1[3], color = 'red',   s=200)

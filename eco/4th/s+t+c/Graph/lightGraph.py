@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def plot2D(xData, yData):
-    plt.figure(figsize=(5, 5))
-    plt.scatter(xData, yData, c='red')
-    plt.xlabel('time')
-    plt.ylabel('lux')
+    plt.figure(figsize=(30, 10))
+    plt.scatter(xData, yData, c='red', s = 100)
+    plt.xlabel('time', fontsize = 20)
+    plt.ylabel('lux', fontsize = 20)
     plt.show()
 
 df = pd.read_csv("lightTime.csv", header=None)
