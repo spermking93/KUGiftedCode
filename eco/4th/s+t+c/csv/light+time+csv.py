@@ -1,11 +1,13 @@
-# 조도센서를 이용해서 주변 환경의 밝기를 측정합니다.
+# 조도센서를 이용해서 주변 환경의 밝기를 측정하고 측정 시각과 함께 csv 파일에 저장해봅니다.
 
 import smbus   # i2c 라이브러리
 import time
 import csv
 import datetime
 
+# lightTime.csv 파일을 쓰기 모드로 엽니다.
 fLightT = open('lightTime.csv', 'w', encoding='utf-8', newline='')
+# csv 파일에 쓰기 위한 객체를 만듭니다.
 wr = csv.writer(fLightT)
 
 # 사용할 i2c 채널 번호
@@ -29,6 +31,7 @@ ONETIME_L_RES_MODE  = 0x23
 # 사용할 I2C 채널 라이브러리를 생성합니다.
 i2c = smbus.SMBus(I2C_CH)
 
+# 1초간의 텀을 줍니다.
 time.sleep(1)
 
 # 아래의 코드를 시도합니다.
@@ -39,12 +42,17 @@ try:
         luxBytes = i2c.read_i2c_block_data(BH1750_DEV_ADDR, CONT_H_RES_MODE, 2)
         # 바이트 배열을 int로 변환합니다.
         lux = int.from_bytes(luxBytes, byteorder='big')
+
+        # 현재 시간을 now에 저장합니다.
         now = datetime.datetime.now()
+        # now에 저장한 현재 시간을 시, 분, 초의 형태로 nowTime에 저장합니다.
         nowTime = now.strftime('%H:%M:%S')
-        # 출력합니다.
         
+        # 형식에 맞게 시간과 lux를 출력합니다.
         print('time={0} lux={1:0.01f}'.format(nowTime,lux))
+        # 형식에 맞게 csv 파일에 작성합니다.
         wr.writerow([nowTime, lux])
+        
         # 1초의 텀을 줍니다.
         time.sleep(1)
 
