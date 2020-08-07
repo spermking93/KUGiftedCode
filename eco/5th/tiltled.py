@@ -15,6 +15,8 @@ GPIO.output(20, GPIO.HIGH)
 GPIO.setup(21,GPIO.OUT)     # B
 GPIO.output(21, GPIO.HIGH)
 
+time.sleep(1)
+
 initx, inity, initz = accel.read()
 print("initial x, y, z: {0}, {1}, {2}".format(initx, inity, initz))
 
@@ -53,6 +55,4 @@ try:
         
 
 except KeyboardInterrupt:
-    GPIO.clean()
-
-GPIO.cleanup()
+    GPIO.cleanup()

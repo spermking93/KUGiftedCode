@@ -10,6 +10,8 @@ GPIO.output(5, GPIO.LOW)
 GPIO.setup(6, GPIO.OUT)
 GPIO.output(6, GPIO.LOW)
 
+time.sleep(1)
+
 try:
     while True:
         h,t = dht.read_retry(dht.DHT22, 4)
@@ -24,6 +26,3 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()
-
-GPIO.cleanup()
-
