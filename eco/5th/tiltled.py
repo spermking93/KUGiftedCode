@@ -16,7 +16,7 @@ GPIO.setup(21,GPIO.OUT)     # B
 GPIO.output(21, GPIO.HIGH)
 
 initx, inity, initz = accel.read()
-print("initial x, y, z: {0}, {1}, {2}".format(x, y, z))
+print("initial x, y, z: {0}, {1}, {2}".format(initx, inity, initz))
 
 time.sleep(3)       # 3초 쉬고
 
