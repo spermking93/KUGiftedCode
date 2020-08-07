@@ -15,11 +15,11 @@ try:
     while True:
         x, y, z = accel.read()
         if y < -100:
-            print("x, y, z: {0}, {1}, {2} SERVO ROtATED.format(x, y, z))
+            print("x, y, z: {0}, {1}, {2} SERVO ROtATED".format(x, y, z))
             p.ChangeDutyCycle(10)
             print("angle : 90")
         elif y > 100:
-            print("x, y, z: {0}, {1}, {2} SERVO ROtATED.format(x, y, z))
+            print("x, y, z: {0}, {1}, {2} SERVO ROtATED".format(x, y, z))
             p.ChangeDutyCycle(5)
             print("angle : 0")
         
