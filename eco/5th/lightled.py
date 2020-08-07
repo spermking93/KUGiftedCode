@@ -7,9 +7,10 @@ import RPi.GPIO as GPIO
 # GPIO의 핀 모드를 BCM으로 설정합니다.
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(23,GPIO.OUT)     # B
-GPIO.setup(24,GPIO.OUT)     # G
-GPIO.setup(25,GPIO.OUT)     # R
+GPIO.setup(19,GPIO.OUT)     # R
+GPIO.setup(20,GPIO.OUT)     # G
+GPIO.setup(21,GPIO.OUT)     # B
+
 
 # 사용할 i2c 채널 번호
 I2C_CH = 1
@@ -40,31 +41,32 @@ try:
         # 바이트 배열을 int로 변환합니다.
         lux = int.from_bytes(luxBytes, byteorder='big')
         # 출력합니다.
-        print('{0} lux'.format(lux))
+        print('{0} lux LED ON'.format(lux))
 
         # lux가 10 이하로 떨어지면 LED의 색상을 빨간색으로 설정합니다.
         if lux <= 10:
-            GPIO.output(23, GPIO.HIGH)
-            GPIO.output(24, GPIO.HIGH)
-            GPIO.output(25, GPIO.LOW)
+            GPIO.output(21, GPIO.HIGH)
+            GPIO.output(20, GPIO.HIGH)
+            GPIO.output(19, GPIO.LOW)
 
         # lux가 10보다 크고, 850이하라면 LED의 색상을 초록색으로 설정합니다.
         elif 10 < lux <= 850:
-            GPIO.output(23, GPIO.HIGH)
-            GPIO.output(24, GPIO.LOW)
-            GPIO.output(25, GPIO.HIGH)
+            GPIO.output(21, GPIO.HIGH)
+            GPIO.output(20, GPIO.LOW)
+            GPIO.output(19, GPIO.HIGH)
 
         # 위의 경우가 아닌 경우, 850보다 큰 경우 LED의 색상을 파란색으로 설정합니다.
         else:
-            GPIO.output(23, GPIO.LOW)
-            GPIO.output(24, GPIO.HIGH)
-            GPIO.output(25, GPIO.HIGH)
+            GPIO.output(21, GPIO.LOW)
+            GPIO.output(20, GPIO.HIGH)
+            GPIO.output(19, GPIO.HIGH)
         
         # 1초의 텀을 줍니다.
         time.sleep(1)
 
 # 키 인터럽트가 발생하면 종료합니다.
 except KeyboardInterrupt:
-    print("done")
     # GPIO 설정을 초기화합니다.
     GPIO.cleanup()
+
+GPIO.cleanup()

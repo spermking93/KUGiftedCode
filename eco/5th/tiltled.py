@@ -8,14 +8,15 @@ accel = Adafruit_ADXL345.ADXL345()
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(23,GPIO.OUT)     # B
-GPIO.output(23, GPIO.HIGH)
-GPIO.setup(24,GPIO.OUT)     # G
-GPIO.output(24, GPIO.HIGH)
-GPIO.setup(25,GPIO.OUT)     # R
-GPIO.output(25, GPIO.HIGH)
+GPIO.setup(19,GPIO.OUT)     # R
+GPIO.output(19, GPIO.HIGH)
+GPIO.setup(20,GPIO.OUT)     # G
+GPIO.output(20, GPIO.HIGH)
+GPIO.setup(21,GPIO.OUT)     # B
+GPIO.output(21, GPIO.HIGH)
 
 initx, inity, initz = accel.read()
+print("initial x, y, z: {0}, {1}, {2}".format(initx, inity, initz))
 
 time.sleep(3)       # 3초 쉬고
 
@@ -33,17 +34,20 @@ try:
         '''
 
         if max(subx, suby, subz) == subx:
+            print("x, y, z: {0}, {1}, {2} RED LED ON".format(x, y, z))
             GPIO.output(19, GPIO.LOW)
             GPIO.output(20, GPIO.HIGH)
             GPIO.output(21, GPIO.HIGH)
         elif max(subx, suby, subz) == suby:
-            GPIO.output(19, GPIO.HIGH)
-            GPIO.output(20, GPIO.HIGH)
-            GPIO.output(21, GPIO.LOW)
-        else:
+            print("x, y, z: {0}, {1}, {2} GREEN LED ON".format(x, y, z))
             GPIO.output(19, GPIO.HIGH)
             GPIO.output(20, GPIO.LOW)
             GPIO.output(21, GPIO.HIGH)
+        else:
+            print("x, y, z: {0}, {1}, {2} BLUE LED ON".format(x, y, z))
+            GPIO.output(19, GPIO.HIGH)
+            GPIO.output(20, GPIO.HIGH)
+            GPIO.output(21, GPIO.LOW)
 
         time.sleep(1)
         
@@ -51,3 +55,4 @@ try:
 except KeyboardInterrupt:
     GPIO.clean()
 
+GPIO.cleanup()

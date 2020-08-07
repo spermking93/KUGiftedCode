@@ -19,7 +19,7 @@ try:
         h,t = dht.read_retry(dht.DHT22, 4)
         
         if h < 70:
-            print("pump on")
+            print("Hum: {0:0.1f}% PUMP ON".format(h))
             # GPIO의 23번 핀을 HIGH로 설정하여 펌프를 작동시킵니다.
             GPIO.output(23, GPIO.HIGH)
             # 3초간 유지합니다.
@@ -33,3 +33,5 @@ try:
 # 키 인터럽트가 발생하면 종료합니다.
 except KeyboardInterrupt:
     GPIO.cleanup()
+
+GPIO.cleanup()

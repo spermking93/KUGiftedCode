@@ -15,7 +15,7 @@ try:
         h,t = dht.read_retry(dht.DHT22, 4)
         
         if t>= 25:
-            print("fan on")
+            print("Temp: {0:0.1f}*C FAN ON".format(t))
             GPIO.output(5, GPIO.HIGH)
             time.sleep(3)
             GPIO.output(5, GPIO.LOW)
@@ -23,6 +23,7 @@ try:
         time.sleep(1.0)
 
 except KeyboardInterrupt:
-    print("done")
     GPIO.cleanup()
+
+GPIO.cleanup()
 
