@@ -65,6 +65,7 @@ Now students can take the datas. they can draw 2D, 3D graph with thier own datas
   Final goal of 4th week is uploading the code for drawing 2D or 3D graph for what they choose.
 
 ## 5th Week
+[5th Week Presentation](https://drive.google.com/file/d/1xsO4M6WArmg91-nGcnboCsAo_Cr85BGX/view?usp=sharing)
  Students will learn about 'if' command. Specifically, they will make thier own code to turn on water pump 'if' the humidity is lower than certain threshold.
 They should take the sensors and module for making their own module - 'if'.
 
