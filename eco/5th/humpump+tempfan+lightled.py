@@ -22,6 +22,9 @@ GPIO.setup(19,GPIO.OUT)     # R
 GPIO.setup(20,GPIO.OUT)     # G
 GPIO.setup(21,GPIO.OUT)     # B
 
+for i in range(3):
+    GPIO.output(19+i, GPIO.HIGH)
+
 # 사용할 i2c 채널 번호
 I2C_CH = 1
 # BH1750 주소
